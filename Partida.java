@@ -11,7 +11,7 @@ public class Partida {
 	private int Num_Jugador;
 	private int Num_Missil;
 	private int Num_escut;
-	private int num_ronda;
+	private int Num_ronda;
 		public void crear_equips() {
 			System.out.println("Quants jugadors vols crear");
 			num_jugadors=jugador.nextInt();
@@ -32,20 +32,23 @@ public class Partida {
 		private void jugada(){
 			mostrar_jugadors();
 			for(Jugador player: llista_jugadors) {			
+				int Vataque=5;
+				int Vdefensa=5;
 				while (player.stamina>0){
-					System.out.println(player.nom+" vols atacar o defensar-te?(1.atac, 2.defensa)");
-					Tipus_Jugada=Jugada.nextInt();
-					if(Tipus_Jugada==1) {
-						System.out.println("A qui vols atacar? (Indica el nombre de jugador)");
-						
-					}else if(Tipus_Jugada==2) {
+					System.out.println("Fase de ataque:");
+					while(Vataque!=0) {
 						
 					}
+					System.out.println("Fase de defensa:");
+					while(Vdefensa!=0) {
+						
+					}
+
 				}
 			}
 		}
 		private void mostrar_jugadors() {
-			System.out.println("RONDA: "+num_ronda);
+			System.out.println("RONDA: "+Num_ronda);
 			for(Jugador player:llista_jugadors) {
 				System.out.println(player.n_jugador+" - "+player.nom+": "+player.vida);
 			}
